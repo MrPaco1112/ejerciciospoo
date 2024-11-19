@@ -1,2 +1,2 @@
 # ejerciciospoo
-Ejercicios 1 - 30, Juan Sarmiento, Grupo 2 POO UNAL :D
+Ejercicios de POO, Juan Sarmiento, Grupo 2 - POO - UNAL :D
