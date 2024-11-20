@@ -50,7 +50,7 @@ Pantallazos de las salidas:
 ![image](https://github.com/user-attachments/assets/95c744dc-a7b2-483d-b802-55be7707687c)
 
 25-)
-![image](https://github.com/user-attachments/assets/99d839bb-ce71-48f4-b6c2-ada77aa1a211)
+![image](https://github.com/user-attachments/assets/be72d7f5-dadf-4fce-9958-290d586a23fe)
 
 26-)
 ![image](https://github.com/user-attachments/assets/a58c6b4d-5f34-49ab-baaf-54666c486796)
