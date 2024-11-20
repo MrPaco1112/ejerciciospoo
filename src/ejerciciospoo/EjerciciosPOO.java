@@ -4,6 +4,7 @@
 
 package ejerciciospoo;
 import java.util.*;
+import java.math.*;
 
 public class EjerciciosPOO {
 
@@ -67,8 +68,6 @@ public class EjerciciosPOO {
             System.out.println();
             }
         }
-
-       
         
     //14
         int n10;
@@ -161,7 +160,7 @@ public class EjerciciosPOO {
         }catch(InputMismatchException e){
             System.out.println("Uno de los datos ingresados no cumple con los parametros, reintentar");
         }
-      */   
+       
     //22
         System.out.println("Ingrese numero entero: ");
         int n20 = s.nextInt();
@@ -175,7 +174,121 @@ public class EjerciciosPOO {
         }catch(InputMismatchException e){
             System.out.println("El dato ingresado no es un numero entero, reintentar");
         }
+
     //23
+        try{
+            System.out.println("Ingrese el primer entero: ");
+            int n21 = s.nextInt();
+            System.out.println("Ingrese el segundo entero: ");
+            int n22 = s.nextInt();
+            int n23;
+            while (true){
+                n23 = n21 % n22;
+                n21 = n22;
+                n22 = n23;
+                if(n22  == 0){
+                    System.out.println("El MCD es: " + n21);
+                    break;
+                }
+            }
+        }catch(InputMismatchException e){
+            System.out.println("Uno de los datos ingresados no es un numero entero, reintentar");
+        }
+       
+    //24
+        System.out.println("Ingrese los coeficientes de la funcion cuadratica (decimales con ,): ");
+        try{
+            System.out.println("Ingrese coeficiente a: ");
+            double a = s.nextDouble();
+            System.out.println("Ingrese coeficiente b: ");
+            double b = s.nextDouble();
+            System.out.println("Ingrese coeficiente c: ");
+            double c = s.nextDouble();
+            double disc = Math.pow(b , 2) - 4 * a * c;
+            
+            if (disc > 0){
+                double x1 = -b - Math.sqrt(disc)/2*a;
+                double x2 = -b + Math.sqrt(disc)/2*a;
+                System.out.println("La ecuacion tiene 2 soluciones reales : " );
+                System.out.println("x1 = "+ x1 );
+                System.out.println("x2 = " + x2);
+            }else if (disc == 0){
+                double x = -b / 2*a;
+                System.out.println("La ecuacion tiene una solucion doble x = " + x );
+                
+            }else{
+                System.out.println("La ecuacion no tiene soluciones reales");
+            }
+        }catch(InputMismatchException e){
+            System.out.println("Uno de los datos ingresados no cunple los parametros, reintentar");
+        }
+       
+    //25
+       
+        try{
+            System.out.println("Ingrese el numero entero a sacar factorial: ");
+            int n24 = s.nextInt();
+            System.out.println("El factorial de el numero " + n24 + " es: " + factorial(n24));
+            System.out.println("Ingrese los numeros enteros a ingresar en la funcion de Ackerman");
+            int n25 = s.nextInt();
+            int n26 = s.nextInt();
+            System.out.println("El resultado de Ackerman de " + n25 + " y " + n26 + " es: " + ackerman(n25, n26));
+        }catch(InputMismatchException e){
+            System.out.println("El dato ingresado no cumple los parametros, reintentar");
+        }
         
     }
-}
+    public static BigInteger factorial(long n24){
+        if(n24 == 0){
+            return BigInteger.ONE;
+        } 
+        return BigInteger.valueOf(n24).multiply(factorial(n24-1));
+    }
+    public static BigInteger ackerman(int n25 , int n26){
+     if ( n25 == 0){
+         return BigInteger.valueOf(n26);
+     }
+     if(n25 > 0 && n26 == 0){
+         return ackerman(n25 -1, ackerman(n25, n26-1).intValue());
+     }
+     return ackerman(n25 -1, n26);
+    }
+ */ //Nota comentar la llave del metodo main antes de descomentar 25 y viceversa
+ /*
+    //26
+        try{
+          int[] nums = new int[3];
+            System.out.println("Ingrese 3 numeros enteros");
+            for (int i = 0 ; i < 3 ; i++){
+                System.out.println("Numero " +(i+1) + " : " );
+                nums[i]=s.nextInt();
+            }
+            Arrays.sort(nums);
+            System.out.println("El numero mayor es: " + nums[nums.length-1]);
+            System.out.println("El numero menor es: " + nums[0]);
+        }catch(InputMismatchException e){
+            System.out.println("El dato ingresado no cumple los parametros, reintentar");
+        }
+        */
+    //27
+        try{
+            
+            while (true){
+                System.out.println("Ingrese el valor de la temperatura a convertir de °F  a °C (decimales con ,)");
+                double tempF = s.nextDouble();
+                double tempC;
+                if (tempF < 999){
+                tempC = 5.0/9.0 * (tempF - 32);
+                    System.out.println("La temperatura en °C es: " + tempC);
+                }else{
+                    System.out.println("Limite numerico sobrepasado (999), programa finalizado");
+                    break;
+                }
+            }
+        }catch(InputMismatchException e){
+            System.out.println("El dato ingresado no cumple los parametros, reintentar");
+        }
+    //28
+        
+    }  
+ }
