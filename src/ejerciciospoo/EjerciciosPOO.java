@@ -1,6 +1,6 @@
 // Autor: Juan Esteban Sarmiento Benítez
 // Tarea ejercicios de Java :D
-
+// Al estar todo en un mismo archivo están comentados para que no se ejecuten a la vez, sin embargo se podria hacer igualmente dado que ninguna variable se repite
 
 package ejerciciospoo;
 import java.util.*;
@@ -14,8 +14,8 @@ public class EjerciciosPOO {
     //1
         System.out.println("Hola, ya se imprimir frases");
     //2
-        int s=117;
-        System.out.println(s);
+        int S=117;
+        System.out.println(S);
     //3
         double a=6.89;
         System.out.println(a);
@@ -112,7 +112,7 @@ public class EjerciciosPOO {
             for(n18 = n17; n18<n17+100;n18++){
                 n19 += n18;
             }
-            System.out.println(n19);
+            System.out.println("la suma de " + n17 + " y sus 100 numeros siguientes es: " + n19);
         }catch(InputMismatchException e){
             System.out.println("El dato ingresado no es un entero, por favor reintentar");
         }
@@ -223,7 +223,7 @@ public class EjerciciosPOO {
             System.out.println("Uno de los datos ingresados no cunple los parametros, reintentar");
         }
        
-    //25
+    //25 //Nota: comentar la llave del metodo main antes de descomentar 25 y viceversa
        
         try{
             System.out.println("Ingrese el numero entero a sacar factorial: ");
@@ -238,7 +238,7 @@ public class EjerciciosPOO {
         }
         
     }
-    public static BigInteger factorial(long n24){
+    public static BigInteger factorial(int n24){  //Se usa BigInteger para que se puedan manejar e imprimir numeros grandes dado la velocidad de crecimiento de la función
         if(n24 == 0){
             return BigInteger.ONE;
         } 
@@ -246,14 +246,14 @@ public class EjerciciosPOO {
     }
     public static BigInteger ackerman(int n25 , int n26){
      if ( n25 == 0){
-         return BigInteger.valueOf(n26);
+         return BigInteger.valueOf(n26 + 1);
      }
      if(n25 > 0 && n26 == 0){
-         return ackerman(n25 -1, ackerman(n25, n26-1).intValue());
+         return ackerman(n25 -1, 1);
      }
-     return ackerman(n25 -1, n26);
+     return ackerman(n25 -1, ackerman(n25, n26-1).intValue());
     }
- */ //Nota comentar la llave del metodo main antes de descomentar 25 y viceversa
+ */ 
  /*
     //26
         try{
