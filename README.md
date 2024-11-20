@@ -1,4 +1,4 @@
-# ejerciciospoo
+Ejercicios 1 - 30 POO
 Ejercicios de POO, Juan Sarmiento, Grupo 2 - POO - UNAL :D
 Pantallazos de las salidas:
 
