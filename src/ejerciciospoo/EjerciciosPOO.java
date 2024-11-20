@@ -269,7 +269,7 @@ public class EjerciciosPOO {
         }catch(InputMismatchException e){
             System.out.println("El dato ingresado no cumple los parametros, reintentar");
         }
-        */
+        
     //27
         try{
             
@@ -288,7 +288,88 @@ public class EjerciciosPOO {
         }catch(InputMismatchException e){
             System.out.println("El dato ingresado no cumple los parametros, reintentar");
         }
-    //28
-        
+
+    //28.1 //con break
+        for (int n27 = 0;n27 <=7;n27++){
+            System.out.println("Iteracion #: " + n27);
+            switch(n27){
+                case 0:
+                    System.out.println("Caso 0 --> Este es el caso 0 :D");
+                    break;
+                case 1:
+                    System.out.println("Caso 1 --> Este es el caso 1 :D");
+                    break;
+                case 2:
+                    System.out.println("Caso 2 --> Este es el caso 2 :D");
+                    break;
+                case 3:    
+                    System.out.println("Caso 3 --> Este es el caso 3 :D");
+                    break;
+                case 4:    
+                    System.out.println("Caso 4 --> Este es el caso 4 :D");
+                    break;
+                case 5:    
+                    System.out.println("Caso 5 --> Este es el caso 5 :D");
+                    break;
+                default:  
+                    System.out.println("Caso default --> Ningun caso coincide D:");
+                    break;
+                            
+            }
+             System.out.println(" ");       
+        }
+    //28.2 //sin break
+       for (int n27 = 0;n27 <=7;n27++){
+            System.out.println("Iteracion #: " + n27);
+            switch(n27){
+                case 0:
+                    System.out.println("Caso 0 --> Este es el caso 0 :D");
+                case 1:
+                    System.out.println("Caso 1 --> Este es el caso 1 :D");
+                case 2:
+                    System.out.println("Caso 2 --> Este es el caso 2 :D");
+                case 3:    
+                    System.out.println("Caso 3 --> Este es el caso 3 :D");
+                case 4:    
+                    System.out.println("Caso 4 --> Este es el caso 4 :D");
+                case 5:    
+                    System.out.println("Caso 5 --> Este es el caso 5 :D");
+                default:  
+                    System.out.println("Caso default --> Ningun caso coincide D:");
+                            
+            }
+             System.out.println(" ");         
+        }
+       
+     //29
+        System.out.println("Escribe algo (presiona CTRL+D o CTRL+Z para terminar):");
+
+        while (s.hasNextLine()) {
+            String linea = s.nextLine();
+            System.out.println("Leído: " + linea);
+        }
+
+        System.out.println("Fin de entrada detectado.");
+        s.close();
+    */
+    //30
+        try{
+        System.out.println("Ingresa el numero entero hasta el que deseas ver numeros primos: ");   
+        int n28 = s.nextInt(); 
+            for (int n29 = 2;n29<=n28;n29++){
+                boolean primo = true;
+                    for(int n30 = 2 ;n30 < n29;n30++){
+                        if (n29 % n30 == 0){
+                            primo = false;
+                             break;
+                        }
+                    }
+                    if(primo){
+                        System.out.println(n29);
+                    }    
+            }
+        }catch(InputMismatchException e){
+        System.out.println("El dato no cumple con los parametros, reintentar");
+        }   
     }  
- }
+}
